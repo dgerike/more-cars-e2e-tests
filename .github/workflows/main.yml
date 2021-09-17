@@ -24,6 +24,7 @@ jobs:
         with:
           record: true
           parallel: true
+          browser: electron
           group: "Electron - Desktop"
         env:
           # pass the Dashboard record key as an environment variable
@@ -55,6 +56,8 @@ jobs:
         with:
           record: true
           parallel: true
+          browser: firefox
+          config: "viewportWidth=375,viewportHeight=667"
           group: "Firefox - Mobile"
         env:
           # pass the Dashboard record key as an environment variable

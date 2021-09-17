@@ -1,6 +1,7 @@
 When('the user tries to "Create" a new node', () => {
     cy.get('.nav-link')
         .contains('Create')
+        .parent('a')
         .click()
 })
 
