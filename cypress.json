@@ -1,5 +1,7 @@
 {
   "baseUrl": "https://more-cars.net",
   "projectId": "zoms1v",
-  "videoCompression": 24
+  "videoCompression": 24,
+  "viewportWidth": 1920,
+  "viewportHeight": 1080
 }
