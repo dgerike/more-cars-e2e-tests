@@ -1,0 +1,22 @@
+{
+  "name": "more-cars-e2e-tests",
+  "version": "0.1.0",
+  "description": "End-2-End tests for more-cars.net (Cypress)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgerike/more-cars-e2e-tests.git"
+  },
+  "author": "Dennis Gerike",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dgerike/more-cars-e2e-tests/issues"
+  },
+  "homepage": "https://github.com/dgerike/more-cars-e2e-tests#readme",
+  "devDependencies": {
+    "cypress": "^8.4.0"
+  }
+}
