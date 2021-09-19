@@ -1,6 +1,10 @@
 Feature: Homepage
-  Scenario: The homepage should display all mandatory sections
-    Given the user is on the homepage
+  Scenario: The Homepage should display all mandatory sections
+    Given the user is on the Homepage
+    Then there should be a More Cars logo
     Then there should be a section "What is More Cars"
     Then there should be a section "Car of the Moment"
     Then there should be a section "Number of the day"
+    Then there should be a section "Database Statistics"
+    Then there should be a section "Latest User Contributions"
+    Then there should be a section "Social Media"

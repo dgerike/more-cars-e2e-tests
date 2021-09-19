@@ -1,4 +1,4 @@
-Given('the user is on the homepage', () => {
+Given('the user is on the Homepage', () => {
     cy.visit('/')
 
     cy.contains('Car of the Moment')
