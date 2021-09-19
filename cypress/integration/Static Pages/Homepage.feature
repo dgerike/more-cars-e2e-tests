@@ -8,4 +8,3 @@ Feature: Homepage
     Then there should be a section "Database Statistics"
     Then there should be a section "Latest User Contributions"
     Then there should be a section "Social Media"
-

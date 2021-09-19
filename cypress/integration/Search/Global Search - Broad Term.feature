@@ -1,6 +1,6 @@
 Feature: Global Search
   Scenario: The user searches for a broad term
-    Given the user is on the homepage
+    Given the user is on the Homepage
     When the user executes a global search with the term "Ferrari"
     Then the search result page should be displayed
     And the search result should return matches for the node type "Car Model"
