@@ -10,6 +10,23 @@ Then('the search result page should be displayed', () => {
         .should('be.visible')
 })
 
+Then('the search result page should be empty', () => {
+    // checking the result counter (in the statistics container)
+    cy.contains('Matches in total')
+        .find('span')
+        .then(counter => {
+            expect(parseInt(counter.text())).to.be.equal(0)
+        })
+
+    // checking the actual search results
+    cy.get('h2')
+        .should('not.exist')
+
+    // checking the "Nothing found" warning
+    cy.get('.alert')
+        .should('be.visible')
+})
+
 Then('the search result should return matches for the node type {string}', (nodeType) => {
     // checking the result counter (in the statistics container)
     cy.contains('Statistics')
