@@ -11,3 +11,8 @@ Given('the user is on the {string} overview page', (nodeType) => {
 Given('the user is on the page with the ID {string}', (id) => {
     cy.visit('/' + id)
 })
+
+Then('the user should be redirected to the Error Page', () => {
+    cy.contains('you are not allowed to do this')
+        .should('be.visible')
+})

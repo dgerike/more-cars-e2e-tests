@@ -34,3 +34,15 @@ Then('a fact sheet for this car model variation should be displayed', () => {
         .contains('Fact Sheet')
         .should('be.visible')
 })
+
+When('the user tries to "Edit" a relationship', () => {
+    cy.get('h2')
+        .contains('edit', {matchCase: false})
+        .click()
+})
+
+When('the user tries to "Manage Images"', () => {
+    cy.get('a')
+        .contains('manage images', {matchCase: false})
+        .click()
+})
