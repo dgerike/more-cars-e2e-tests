@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/dgerike/more-cars-e2e-tests#readme",
   "devDependencies": {
-    "cypress": "^8.4.0",
+    "cypress": "9.2.0",
     "cypress-cucumber-preprocessor": "^4.2.0"
   }
 }
