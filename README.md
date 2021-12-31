@@ -34,7 +34,7 @@ The other mode is for executing the test suite.
 
 ### Running tests on the command line
 1. Navigate to the path of the cloned repo
-1. Run `npx cypress run`
+1. Run `npm test` or `npx cypress run`
 1. The whole test suite should be executed in headless mode (meaning, without the browser popping up)
 1. At the end a table with the test results should be shown
 1. Use the parameter `spec` to only run a subset of tests, e.g. `npx cypress run --spec "cypress/integration/Search/*"` to only run all search-related tests
