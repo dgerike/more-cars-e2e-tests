@@ -25,7 +25,7 @@ rm -rf "$SCRIPTS_DIR"/temp/*
 rm -rf "$SCRIPTS_DIR"/../cypress/integration/e2e/*
 
 # downloading the scenarios in the newest version from Xray (-> one big json file)
-node "$SCRIPTS_DIR"/libs/fetch-scenarios-from-xray.js
+node "$SCRIPTS_DIR"/libs/fetch-scenarios-from-xray.mjs
 if [ $? -ne 0 ]
 then
   echo "Downloading the scenarios from Xray failed."
@@ -33,7 +33,7 @@ then
 fi
 
 # extracting the downloaded scenarios and converting them to proper feature files (-> cypress/integration/e2e folder)
-node "$SCRIPTS_DIR"/libs/extract-gherkin-scenarios.js "$@"
+node "$SCRIPTS_DIR"/libs/extract-gherkin-scenarios.mjs "$@"
 if [ $? -ne 0 ]
 then
   echo "Extracting the scenarios failed."
