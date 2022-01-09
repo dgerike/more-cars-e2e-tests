@@ -1,5 +1,8 @@
-Feature: Global Search
-  Scenario: The user searches for a broad term
+@REQ_MCD_
+Feature:
+
+  @TEST_E2E_20 @Search
+  Scenario: E2E-20 » The user searches for a broad term »
     Given the user is on the Homepage
     When the user executes a global search with the term "Ferrari"
     Then the search result page should be displayed

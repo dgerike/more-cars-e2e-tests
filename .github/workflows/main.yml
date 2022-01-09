@@ -25,6 +25,7 @@ jobs:
           record: true
           parallel: true
           browser: electron
+          config: "integrationFolder=cypress/integration/e2e/Done,viewportWidth=1920,viewportHeight=1080"
           group: "Electron - Desktop"
         env:
           # pass the Dashboard record key as an environment variable
@@ -57,7 +58,7 @@ jobs:
           record: true
           parallel: true
           browser: firefox
-          config: "viewportWidth=375,viewportHeight=667"
+          config: "integrationFolder=cypress/integration/e2e/Done,viewportWidth=375,viewportHeight=667"
           group: "Firefox - Mobile"
         env:
           # pass the Dashboard record key as an environment variable

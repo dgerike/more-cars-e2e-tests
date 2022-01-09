@@ -4,7 +4,8 @@
   "description": "End-2-End tests for more-cars.net (Cypress)",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "download-scenarios": "scripts/download-gherkin-scenarios.sh",
+    "test": "npx cypress run --config integrationFolder=cypress/integration/e2e/Done"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   "homepage": "https://github.com/dgerike/more-cars-e2e-tests#readme",
   "devDependencies": {
     "cypress": "9.2.0",
-    "cypress-cucumber-preprocessor": "4.3.1"
+    "cypress-cucumber-preprocessor": "4.3.1",
+    "node-fetch": "3.1.0",
+    "sanitize-filename": "1.6.3"
   }
 }

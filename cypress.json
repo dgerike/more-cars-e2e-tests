@@ -1,5 +1,6 @@
 {
   "baseUrl": "https://more-cars.net",
+  "integrationFolder": "cypress/integration/e2e",
   "projectId": "zoms1v",
   "videoCompression": 20,
   "videoUploadOnPasses": false,
