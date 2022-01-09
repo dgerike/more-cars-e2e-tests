@@ -4,6 +4,7 @@
   "description": "End-2-End tests for more-cars.net (Cypress)",
   "main": "index.js",
   "scripts": {
+    "download-scenarios": "scripts/download-gherkin-scenarios.sh",
     "test": "npx cypress run"
   },
   "repository": {
