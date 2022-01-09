@@ -1,5 +1,8 @@
-Feature: Homepage
-  Scenario: The Homepage should display all mandatory sections
+@REQ_MCD_216
+Feature: Add "PS Converter" widget to homepage
+
+  @TEST_E2E_2 @Homepage
+  Scenario: E2E-2 » The Homepage should display all mandatory sections »
     Given the user is on the Homepage
     Then there should be a More Cars logo
     Then there should be a section "What is More Cars"
