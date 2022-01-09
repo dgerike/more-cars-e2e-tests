@@ -57,8 +57,8 @@ function extract(scenarioCollection) {
         let content = `@REQ_MCD_${parentIssueId}
             Feature: ${parentIssueTitle}
             ${backgroundBlock}
-            @TEST_MCD_${scenarioId} ${labels}
-                ${scenarioType}: MCD-${scenarioId} » ${title} »
+            @TEST_E2E_${scenarioId} ${labels}
+                ${scenarioType}: E2E-${scenarioId} » ${title} »
                 ${sentences}`;
 
         const targetDirectory = `cypress/integration/e2e/${ticketStatus}`;
@@ -66,7 +66,7 @@ function extract(scenarioCollection) {
             fs.mkdirSync(targetDirectory);
         }
         const filename = sanitize(title);
-        fs.writeFileSync(targetDirectory + `/MCD-${scenarioId} - ${filename}.feature`, content);
+        fs.writeFileSync(targetDirectory + `/E2E-${scenarioId} - ${filename}.feature`, content);
     });
 
     process.stdout.write(' done');
