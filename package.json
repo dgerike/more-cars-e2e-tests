@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "download-scenarios": "scripts/download-gherkin-scenarios.sh",
-    "test": "npx cypress run"
+    "test": "npx cypress run --config integrationFolder=cypress/integration/e2e/Done"
   },
   "repository": {
     "type": "git",
