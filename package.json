@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "download-scenarios": "scripts/download-gherkin-scenarios.sh",
+    "upload-test-results": "scripts/upload-test-results-to-xray.sh",
     "test": "npx cypress run --config integrationFolder=cypress/integration/e2e/Done"
   },
   "cypress-cucumber-preprocessor": {
