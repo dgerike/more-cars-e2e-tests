@@ -34,6 +34,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload test results
         run: npm run upload-test-results
+        env:
+          # pass the Xray credentials as environment variables
+          XRAY_API_CLIENT_ID: ${{ secrets.XRAY_API_CLIENT_ID }}
+          XRAY_API_CLIENT_SECRET: ${{ secrets.XRAY_API_CLIENT_SECRET }}
 
 #  cypress-firefox-mobile:
 #    runs-on: ubuntu-latest
@@ -69,3 +73,7 @@ jobs:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #      - name: Upload test results
 #        run: npm run upload-test-results
+#        env:
+#          # pass the Xray credentials as environment variables
+#          XRAY_API_CLIENT_ID: ${{ secrets.XRAY_API_CLIENT_ID }}
+#          XRAY_API_CLIENT_SECRET: ${{ secrets.XRAY_API_CLIENT_SECRET }}
