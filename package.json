@@ -5,7 +5,17 @@
   "main": "index.js",
   "scripts": {
     "download-scenarios": "scripts/download-gherkin-scenarios.sh",
-    "test": "npx cypress run --config integrationFolder=cypress/integration/e2e/Done"
+    "upload-test-results": "scripts/upload-test-results-to-xray.sh",
+    "test": "npx cypress run --config integrationFolder=cypress/integration/e2e/Done",
+    "test-and-upload-to-cypress-dashboard": "npx cypress run --config integrationFolder=cypress/integration/e2e/Done --record"
+  },
+  "cypress-cucumber-preprocessor": {
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   },
   "repository": {
     "type": "git",

@@ -32,6 +32,12 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload test results
+        run: npm run upload-test-results
+        env:
+          # pass the Xray credentials as environment variables
+          XRAY_API_CLIENT_ID: ${{ secrets.XRAY_API_CLIENT_ID }}
+          XRAY_API_CLIENT_SECRET: ${{ secrets.XRAY_API_CLIENT_SECRET }}
 
   cypress-firefox-mobile:
     runs-on: ubuntu-latest
@@ -65,3 +71,9 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload test results
+        run: npm run upload-test-results
+        env:
+          # pass the Xray credentials as environment variables
+          XRAY_API_CLIENT_ID: ${{ secrets.XRAY_API_CLIENT_ID }}
+          XRAY_API_CLIENT_SECRET: ${{ secrets.XRAY_API_CLIENT_SECRET }}
