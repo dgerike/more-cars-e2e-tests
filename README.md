@@ -39,3 +39,20 @@ The other mode is for executing the test suite.
 1. At the end a table with the test results should be shown
 1. Use the parameter `spec` to only run a subset of tests, e.g. `npx cypress run --spec "cypress/integration/Search/*"` to only run all search-related tests
 1. See https://docs.cypress.io/guides/guides/command-line#cypress-run for more options
+
+## Test Synchronization
+
+The test scenarios are located in the folder `cypress/integration/e2e`, 
+but their management happens in a different tool.
+The scenarios have identifiers in their filenames (e.g. `E2E-29`), 
+because they are represented as issues in the project management tool _Jira_ (with _Xray_ extension).
+
+To download these scenarios there is a script called `scripts/download-gherkin-scenarios.sh`.
+It requires the `XRAY_API_CLIENT_ID` and the `XRAY_API_CLIENT_SECRET` to be set as environment variables before starting the script.
+See https://docs.getxray.app/display/XRAYCLOUD/Global+Settings%3A+API+Keys on how to obtain these credentials.
+```
+export XRAY_API_CLIENT_ID=...
+export XRAY_API_CLIENT_SECRET=...
+
+npm run download-scenarios
+```
