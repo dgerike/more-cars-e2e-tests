@@ -123,3 +123,23 @@ To activate the uploading to the Cypress Dashboard the following information nee
 See https://docs.cypress.io/guides/dashboard/projects for more information.
 
 The results for this project can be seen here: https://dashboard.cypress.io/projects/zoms1v/runs
+
+#### Xray/Jira
+
+Another way to visualize the test results is test management tool `Xray`.
+It is a (paid) plugin for the project management tool `Jira`.
+It allows to write, manage and execute tests.
+It integrates very well with Jira and is capable of creating comprehensive test reports.
+
+The Xray API offers multiple options to upload test results into their system, see https://docs.getxray.app/display/XRAYCLOUD/Import+Execution+Results+-+REST+v2.  
+In this project we use the option `Cucumber JSON results Multipart`.
+The code is wrapped in the script `upload-test-results-to-xray.sh`.
+
+It requires the `XRAY_API_CLIENT_ID` and the `XRAY_API_CLIENT_SECRET` to be set as environment variables before starting the script.
+See https://docs.getxray.app/display/XRAYCLOUD/Global+Settings%3A+API+Keys on how to obtain these credentials.
+```
+export XRAY_API_CLIENT_ID=...
+export XRAY_API_CLIENT_SECRET=...
+
+npm run upload-test-results
+```
