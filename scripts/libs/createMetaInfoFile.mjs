@@ -25,4 +25,8 @@ const metaInfo = {
     }
 }
 
-fs.writeFileSync('scripts/temp/meta-info.json', JSON.stringify(metaInfo, null, 2));
+const tempDirectoryPath = 'scripts/temp/';
+if (!fs.existsSync(tempDirectoryPath)) {
+    fs.mkdirSync(tempDirectoryPath)
+}
+fs.writeFileSync(tempDirectoryPath + 'meta-info.json', JSON.stringify(metaInfo, null, 2));
