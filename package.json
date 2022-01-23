@@ -7,6 +7,14 @@
     "download-scenarios": "scripts/download-gherkin-scenarios.sh",
     "test": "npx cypress run --config integrationFolder=cypress/integration/e2e/Done"
   },
+  "cypress-cucumber-preprocessor": {
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dgerike/more-cars-e2e-tests.git"
