@@ -1,7 +1,7 @@
 Then('the user is on a car model page', () => {
     cy.visit('/f40-f120-ferrari__25')
 
-    cy.contains('F40 (F120) - Ferrari')
+    cy.contains('F40 (F120)')
         .should('be.visible')
 
     cy.wrap({'name': 'F40'})
