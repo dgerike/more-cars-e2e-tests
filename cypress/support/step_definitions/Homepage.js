@@ -6,6 +6,7 @@ Given('the user is on the Homepage', () => {
 })
 
 Then('there should be a section {string}', (section) => {
-    cy.contains(section)
+    cy.get('h2')
+        .contains(section)
         .should('be.visible')
 })
