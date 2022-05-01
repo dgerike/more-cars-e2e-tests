@@ -79,7 +79,7 @@ jobs:
 #          XRAY_API_CLIENT_SECRET: ${{ secrets.XRAY_API_CLIENT_SECRET }}
 
   cypress-edge-tablet:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     container:
       image: cypress/browsers:node16.14.0-edge
       options: --user 1001
