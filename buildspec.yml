@@ -18,8 +18,8 @@ phases:
       - npm ci
   pre_build:
     commands:
-      - npm run cy:verify
-      - npm run cy:info
+      - npx cypress verify
+      - npx cypress info
   build:
     commands:
       - npx cypress run
