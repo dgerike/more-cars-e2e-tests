@@ -15,6 +15,7 @@ module.exports = defineConfig({
   viewportHeight: 1080,
 
   e2e: {
+    baseUrl: 'https://more-cars.net',
     specPattern: '**/*.feature',
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber());
