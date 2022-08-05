@@ -1,5 +1,5 @@
 @REQ_MCD_677
-Feature: Add pagination for relationships in Editor
+Feature: Pagination for the relationship items in the editor
 
   @TEST_E2E_5
   Scenario: E2E-5 » The list of relationship items in the editor should be paginated »
