@@ -1,5 +1,5 @@
 @REQ_MCD_677
-Feature: Add pagination for relationships in Editor
+Feature: Pagination for the relationship items in the editor
 
   @TEST_E2E_14 @Auth
   Scenario: E2E-14 » Guest users should not be able to access the editor via "Create" »

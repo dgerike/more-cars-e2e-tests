@@ -1,5 +1,5 @@
-@REQ_MCD_216
-Feature: Add "PS Converter" widget to homepage
+@REQ_MCD_354
+Feature: Update Homepage Content and Structure
 
   @TEST_E2E_2 @Homepage
   Scenario: E2E-2 » The Homepage should display all mandatory sections »

@@ -1,5 +1,5 @@
-@REQ_MCD_216
-Feature: Add "PS Converter" widget to homepage
+@REQ_MCD_595
+Feature: Change route "/home" to "/garage"
 
   @TEST_E2E_4
   Scenario: E2E-4 » Guest users should not be able to access the garage »
