@@ -24,21 +24,22 @@ The first one opens a GUI and is used when developing the tests.
 The other mode is for executing the test suite.
 
 ### Running tests in the GUI
-1. Navigate to the path of the cloned repo
-1. Run `npx cypress open`
-1. A window should open which shows a list of all available tests
-1. Click on a test to run it
-1. Select "Run [n] integration specs" to run the whole test suite
-1. Use the search field to filter tests
-1. Click on "Electron [n]" to switch the browser that should be used for testing
+1. Open a console and navigate to the path of the cloned repo
+2. Run `npx cypress open`
+3. A window with a welcome screen should open 
+4. Select "E2E Testing"
+5. Select one of the available browsers and click "Start E2E Testing in ..."
+6. Click on any of the tests to run it
+8. Use the search field to filter tests
+9. Use the browser toggle to switch browsers on the fly
 
 ### Running tests on the command line
-1. Navigate to the path of the cloned repo
-1. Run `npm test` or `npx cypress run`
-1. The whole test suite should be executed in headless mode (meaning, without the browser popping up)
-1. At the end a table with the test results should be shown
-1. Use the parameter `spec` to only run a subset of tests, e.g. `npx cypress run --spec "cypress/integration/e2e/Done/*"` to only run all tests that are completely implemented
-1. See https://docs.cypress.io/guides/guides/command-line#cypress-run for more options
+1. Open a console and navigate to the path of the cloned repo
+2. Run `npm test` or `npx cypress run`
+3. The whole test suite should be executed in headless mode (meaning, without the browser popping up)
+4. At the end a table with the test results should be shown
+5. Use the parameter `spec` to only run a subset of tests, e.g. `npx cypress run --spec "cypress/integration/e2e/Done/*"` to only run all tests that are completely implemented
+6. See https://docs.cypress.io/guides/guides/command-line#cypress-run for more options
 
 ## Test Synchronization
 
