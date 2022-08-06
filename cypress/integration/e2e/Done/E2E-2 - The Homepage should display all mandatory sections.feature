@@ -9,5 +9,6 @@ Feature: Update Homepage Content and Structure
     Then there should be a section "Car of the Moment"
     Then there should be a section "Number of the day"
     Then there should be a section "Database Statistics"
+    Then there should be a section "Unit Converter"
     Then there should be a section "Latest User Contributions"
     Then there should be a section "Social Media"
