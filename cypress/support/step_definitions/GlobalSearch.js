@@ -1,3 +1,5 @@
+const { Given, When, Then } = require("@badeball/cypress-cucumber-preprocessor");
+
 When('the user executes a global search with the term {string}', (searchTerm) => {
     cy.get('input[name="q"]')
         .type(searchTerm)

@@ -1,3 +1,5 @@
+const { Given, When, Then } = require("@badeball/cypress-cucumber-preprocessor");
+
 Given('the user is on a car model variation page', () => {
     cy.visit('/ferrari-f40-f120ab__1211')
 

@@ -1,3 +1,5 @@
+const { Given, When, Then } = require("@badeball/cypress-cucumber-preprocessor");
+
 Given('there should be a More Cars logo', () => {
     cy.get('h3.mc-logo')
         .contains('More Cars')

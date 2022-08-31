@@ -1,3 +1,5 @@
+const { Given, When, Then } = require("@badeball/cypress-cucumber-preprocessor");
+
 Then('the unit converter widget should be shown', () => {
     cy.contains('Convert from')
         .should('be.visible')
