@@ -6,8 +6,8 @@
   "scripts": {
     "download-scenarios": "scripts/download-gherkin-scenarios.sh",
     "upload-test-results": "scripts/upload-test-results-to-xray.sh",
-    "test": "npx cypress run --config integrationFolder=cypress/integration/e2e/Done",
-    "test-and-upload-to-cypress-dashboard": "npx cypress run --config integrationFolder=cypress/integration/e2e/Done --record"
+    "test": "npx cypress run --config specPattern=**/Done/*.feature",
+    "test-and-upload-to-cypress-dashboard": "npx cypress run --config specPattern=**/Done/*.feature --record"
   },
   "cypress-cucumber-preprocessor": {
     "cucumberJson": {
