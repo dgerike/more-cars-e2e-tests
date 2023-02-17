@@ -6,8 +6,8 @@
   "scripts": {
     "download-scenarios": "scripts/download-gherkin-scenarios.sh",
     "upload-test-results": "scripts/upload-test-results-to-xray.sh",
-    "test": "npx cypress run --config integrationFolder=cypress/integration/e2e/Done",
-    "test-and-upload-to-cypress-dashboard": "npx cypress run --config integrationFolder=cypress/integration/e2e/Done --record"
+    "test": "npx cypress run --config specPattern=**/Done/*.feature",
+    "test-and-upload-to-cypress-dashboard": "npx cypress run --config specPattern=**/Done/*.feature --record"
   },
   "cypress-cucumber-preprocessor": {
     "cucumberJson": {
@@ -28,10 +28,10 @@
   },
   "homepage": "https://github.com/dgerike/more-cars-e2e-tests#readme",
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "12.1.0",
-    "@bahmutov/cypress-esbuild-preprocessor": "2.1.3",
-    "cypress": "10.3.0",
-    "node-fetch": "3.2.10",
+    "@badeball/cypress-cucumber-preprocessor": "15.1.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "2.1.5",
+    "cypress": "12.5.1",
+    "node-fetch": "3.3.0",
     "sanitize-filename": "1.6.3"
   }
 }
