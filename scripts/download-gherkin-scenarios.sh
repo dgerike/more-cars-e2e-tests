@@ -15,7 +15,7 @@ if [ -z "${XRAY_API_CLIENT_SECRET}" ]; then
 fi
 
 # ...so we can request a temporary API token
-export XRAY_API_TOKEN=`${SCRIPTS_DIR}/libs/obtain-xray-api-token.sh`
+export XRAY_API_TOKEN=`"${SCRIPTS_DIR}"/libs/obtain-xray-api-token.sh`
 
 # cleaning the temporary folder
 mkdir -p "$SCRIPTS_DIR"/temp
