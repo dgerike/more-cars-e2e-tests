@@ -1,12 +1,18 @@
-@REQ_MCD_
-Feature:
+@REQ_MCD_TODO
+Feature: TODO
+  As a ...
+  I want to ...
+  So i can ...
+
+@AC_MCD_NONE
+  Rule: NONE
 
   @TEST_E2E_18
-  Scenario: E2E-18 » Core information and relations about a car model should be displayed »
-    Given the user is on a car model page
-    Then a description for this car model should be displayed
-    And photos for this car model should be displayed
-    And a timeline for this car model should be displayed
-    And a list of car model variants for this car model should be displayed
-    And a fact sheet for this car model should be displayed
-    And exactly one brand should be connected to this car model
+    Scenario: E2E-18 » Core information and relations about a car model should be displayed »
+      Given the user is on a car model page
+      Then a description for this car model should be displayed
+      And photos for this car model should be displayed
+      And a timeline for this car model should be displayed
+      And a list of car model variants for this car model should be displayed
+      And a fact sheet for this car model should be displayed
+      And exactly one brand should be connected to this car model
