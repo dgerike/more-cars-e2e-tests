@@ -12,9 +12,10 @@ function extract(scenarioCollection) {
     scenarioCollection.forEach(scenario => {
         process.stdout.write('.');
         let ticketStatus = scenario.jira.status.name;
+        ticketStatus = ticketStatus.replace('Fertig', 'Done');
 
         let scenarioId = scenario.jira.key;
-        scenarioId = scenarioId.substr(4);
+        scenarioId = scenarioId.substring(4);
 
         let scenarioType = 'Scenario';
         if (scenario.scenarioType === 'scenario_outline') {
@@ -43,23 +44,32 @@ function extract(scenarioCollection) {
             `;
         }
 
+        let greatParentIssueTitle = 'TODO';
+        let greatParentIssueId = 'TODO';
+
         let parentIssueTitle = '';
         let parentIssueId = '';
         if (scenario.jira.issuelinks.length > 0) {
             scenario.jira.issuelinks.forEach(link => {
                 if (link.type.outward === 'tests') {
-                    parentIssueId = link.outwardIssue.key.substr(4);
+                    parentIssueId = link.outwardIssue.key.substring(4);
                     parentIssueTitle = link.outwardIssue.fields.summary;
                 }
             });
         }
 
-        let content = `@REQ_MCD_${parentIssueId}
-            Feature: ${parentIssueTitle}
-            ${backgroundBlock}
-            @TEST_E2E_${scenarioId} ${labels}
-                ${scenarioType}: E2E-${scenarioId} » ${title} »
-                ${sentences}`;
+        let content = `@REQ_MCD_${greatParentIssueId}
+            Feature: ${greatParentIssueTitle}
+                As a ...
+                I want to ...
+                So i can ...
+                
+                @AC_MCD_${parentIssueId}
+                Rule: ${parentIssueTitle}
+                    ${backgroundBlock}
+                    @TEST_E2E_${scenarioId} ${labels}
+                        ${scenarioType}: E2E-${scenarioId} » ${title} »
+                        ${sentences}`;
 
         const targetDirectory = `cypress/integration/e2e/${ticketStatus}`;
         if (!fs.existsSync(targetDirectory)) {
