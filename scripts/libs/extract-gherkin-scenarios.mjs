@@ -47,8 +47,8 @@ function extract(scenarioCollection) {
         let greatParentIssueTitle = 'TODO';
         let greatParentIssueId = 'TODO';
 
-        let parentIssueTitle = '';
-        let parentIssueId = '';
+        let parentIssueTitle = 'NONE';
+        let parentIssueId = 'NONE';
         if (scenario.jira.issuelinks.length > 0) {
             scenario.jira.issuelinks.forEach(link => {
                 if (link.type.outward === 'tests') {
