@@ -32,6 +32,11 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Archive test reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-reports
+          path: cypress/reports
       - name: Upload test results
         run: npm run upload-test-results
         env:
