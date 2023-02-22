@@ -77,7 +77,7 @@ function prettify() {
     console.log('');
     process.stdout.write('Prettifying all scenarios... ');
     const featureDir = "cypress/integration/e2e/";
-    child.exec('scripts/libs/ghokin_linux_amd64 fmt replace ' + featureDir);
+    child.exec('scripts/libs/linux_amd64 fmt replace ' + featureDir);
     process.stdout.write('done');
     console.log('');
 }
