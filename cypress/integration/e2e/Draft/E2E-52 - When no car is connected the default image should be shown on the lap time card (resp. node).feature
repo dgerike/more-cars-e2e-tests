@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_780
+# @AC_MCD_780
   Rule: When no car is connected the default image should be shown on the lap time PDP
 
   @TEST_E2E_52

@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_846
+# @AC_MCD_846
   Rule: The "Terms of Use" page should be accessible from each page
 
   @TEST_E2E_32 @Legal

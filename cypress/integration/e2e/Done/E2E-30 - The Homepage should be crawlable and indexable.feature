@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_NONE
+# @AC_MCD_NONE
   Rule: NONE
 
   @TEST_E2E_30

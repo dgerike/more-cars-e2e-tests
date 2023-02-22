@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_770
+# @AC_MCD_770
   Rule: All node types should have sensible default sorting parameters
 
   @TEST_E2E_49

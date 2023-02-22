@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_779
+# @AC_MCD_779
   Rule: Lap time cards should show an image of the connected car
 
   @TEST_E2E_51

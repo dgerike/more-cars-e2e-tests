@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_810
+# @AC_MCD_810
   Rule: Tweeting a car model variant should result in a valid Twitter Card
 
   @TEST_E2E_56 @SocialMedia

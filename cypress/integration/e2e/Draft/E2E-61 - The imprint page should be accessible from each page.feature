@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_844
+# @AC_MCD_844
   Rule: The imprint page should be accessible from each page
 
   @TEST_E2E_61

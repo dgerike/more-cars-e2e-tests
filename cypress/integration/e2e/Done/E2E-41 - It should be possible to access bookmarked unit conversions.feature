@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_733
+# @AC_MCD_733
   Rule: It should be possible to bookmark unit conversions
 
   @TEST_E2E_41

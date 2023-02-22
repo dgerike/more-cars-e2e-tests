@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_828
+# @AC_MCD_828
   Rule: Every WWW request should be redirected to non-WWW
 
   @TEST_E2E_59

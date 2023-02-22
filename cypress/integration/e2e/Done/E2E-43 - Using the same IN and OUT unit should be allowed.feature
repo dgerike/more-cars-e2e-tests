@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_731
+# @AC_MCD_731
   Rule: The Unit Converter should allow converting to the SAME unit
 
   @TEST_E2E_43

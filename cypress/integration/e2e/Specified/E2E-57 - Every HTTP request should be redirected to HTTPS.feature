@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_827
+# @AC_MCD_827
   Rule: Every HTTP request should be redirected to HTTPS
 
   @TEST_E2E_57

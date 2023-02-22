@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_730
+# @AC_MCD_730
   Rule: The Unit Converter should warn the user when trying to convert invalid unit combinations
 
   @TEST_E2E_42

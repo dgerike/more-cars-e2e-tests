@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_940
+# @AC_MCD_940
   Rule: The "Terms of Use" should not be empty
 
   @TEST_E2E_60

@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_595
+# @AC_MCD_595
   Rule: Change route "/home" to "/garage"
 
   @TEST_E2E_4

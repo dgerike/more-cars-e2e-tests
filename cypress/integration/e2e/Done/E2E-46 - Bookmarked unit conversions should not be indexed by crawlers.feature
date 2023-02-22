@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_734
+# @AC_MCD_734
   Rule: Bookmarked unit conversions should not be indexed by crawlers
 
   @TEST_E2E_46

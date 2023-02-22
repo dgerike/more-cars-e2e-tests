@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_728
+# @AC_MCD_728
   Rule: The Unit Converter should always be visible on the homepage
 
   @TEST_E2E_44

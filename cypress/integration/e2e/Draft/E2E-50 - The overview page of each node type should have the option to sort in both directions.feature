@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_766
+# @AC_MCD_766
   Rule: The overview page of each node type should have the option to sort in both directions
 
   @TEST_E2E_50

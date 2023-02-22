@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_276
+# @AC_MCD_276
   Rule: Cache random car for 1 hour
 
   @TEST_E2E_39 @CarOfTheMoment @Homepage

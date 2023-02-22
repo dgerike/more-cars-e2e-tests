@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_769
+# @AC_MCD_769
   Rule: Invalid sort parameters should result in an error message
 
   @TEST_E2E_48

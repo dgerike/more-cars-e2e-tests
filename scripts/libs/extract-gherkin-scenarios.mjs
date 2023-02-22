@@ -64,7 +64,7 @@ function extract(scenarioCollection) {
                 I want to ...
                 So i can ...
                 
-                @AC_MCD_${parentIssueId}
+                # @AC_MCD_${parentIssueId}
                 Rule: ${parentIssueTitle}
                     ${backgroundBlock}
                     @TEST_E2E_${scenarioId} ${labels}

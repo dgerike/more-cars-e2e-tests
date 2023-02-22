@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_732
+# @AC_MCD_732
   Rule: The Unit Converter should allow converting zero and negative values
 
   @TEST_E2E_45

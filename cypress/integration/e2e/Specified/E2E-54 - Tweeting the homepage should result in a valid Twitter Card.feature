@@ -4,7 +4,7 @@ Feature: TODO
   I want to ...
   So i can ...
 
-@AC_MCD_809
+# @AC_MCD_809
   Rule: Tweeting the homepage should result in a valid Twitter Card
 
   @TEST_E2E_54 @Homepage @SocialMedia
