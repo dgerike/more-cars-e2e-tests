@@ -22,7 +22,7 @@ module.exports = defineConfig({
   reporter: "junit",
 
   reporterOptions: {
-    mochaFile: "cypress/reports/test-results-[hash].xml",
+    mochaFile: "cypress/reports/xml/test-results-[hash].xml",
   },
 
   videoCompression: 20,

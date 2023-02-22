@@ -6,17 +6,18 @@
   "scripts": {
     "download-scenarios": "scripts/download-gherkin-scenarios.sh",
     "upload-test-results": "scripts/upload-test-results-to-xray.sh",
-    "test": "npx cypress run --config specPattern=**/Done/*.feature",
+    "test": "npx cypress run --config specPattern=**/Done/*.feature; npm run create-fancy-html-report",
+    "create-fancy-html-report": "node scripts/create-fancy-html-reports.js",
     "test-and-upload-to-cypress-dashboard": "npx cypress run --config specPattern=**/Done/*.feature --record"
   },
   "cypress-cucumber-preprocessor": {
     "json": {
       "enabled": true,
-      "output": "cypress/reports/test-results.json"
+      "output": "cypress/reports/json/test-results.json"
     },
     "html": {
       "enabled": true,
-      "output": "cypress/reports/test-results.html"
+      "output": "cypress/reports/html-basic/test-results.html"
     }
   },
   "repository": {
@@ -34,6 +35,7 @@
     "@bahmutov/cypress-esbuild-preprocessor": "2.1.5",
     "@deepakvishwakarma/cucumber-json-formatter": "^0.0.3",
     "cypress": "12.5.1",
+    "multiple-cucumber-html-reporter": "3.2.0",
     "node-fetch": "3.3.0",
     "sanitize-filename": "1.6.3"
   }
