@@ -4,3 +4,4 @@
 /scripts/libs/ghokin*
 /scripts/temp/
 /cypress/reports/
+/cucumber-messages.ndjson
