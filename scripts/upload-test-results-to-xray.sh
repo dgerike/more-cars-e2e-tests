@@ -14,7 +14,6 @@ fi
 
 # ...so we can request a temporary API token
 XRAY_API_TOKEN=`"${SCRIPTS_DIR}"/libs/obtain-xray-api-token.sh`
-echo XRAY_API_TOKEN
 
 # creating meta file
 node "${SCRIPTS_DIR}"/libs/createMetaInfoFile.mjs
