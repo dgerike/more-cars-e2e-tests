@@ -11,7 +11,7 @@ fetchTests()
     });
 
 function fetchTests() {
-    return fetch('http://xray.cloud.xpand-it.com/api/v2/graphql', {
+    return fetch('https://xray.cloud.getxray.app/api/v2/graphql', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
