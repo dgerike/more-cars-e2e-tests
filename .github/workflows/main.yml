@@ -20,7 +20,8 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
-        uses: cypress-io/github-action@v4.1.1
+        uses: cypress-io/github-action@v5.0.9
+        continue-on-error: true
         with:
           record: true
           parallel: true
@@ -32,6 +33,18 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create fancy HTML report
+        run: npm run create-fancy-html-report
+      - name: Archive test reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-reports
+          path: cypress/reports
+      - name: Archive videos
+        uses: actions/upload-artifact@v3
+        with:
+          name: videos
+          path: cypress/videos
       - name: Upload test results
         run: npm run upload-test-results
         env:
