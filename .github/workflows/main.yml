@@ -16,7 +16,7 @@ jobs:
         containers: [ 1, 2, 3 ]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.5.0
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
@@ -36,12 +36,12 @@ jobs:
       - name: Create fancy HTML report
         run: npm run create-fancy-html-report
       - name: Archive test reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: test-reports
           path: cypress/reports
       - name: Archive videos
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: videos
           path: cypress/videos
@@ -68,7 +68,7 @@ jobs:
 #        containers: [ 1, 2, 3 ]
 #    steps:
 #      - name: Checkout
-#        uses: actions/checkout@v2
+#        uses: actions/checkout@v3.5.0
 #      # Install NPM dependencies, cache them correctly
 #      # and run all Cypress tests
 #      - name: Cypress run
@@ -107,7 +107,7 @@ jobs:
 #        containers: [ 1, 2, 3 ]
 #    steps:
 #      - name: Checkout
-#        uses: actions/checkout@v2
+#        uses: actions/checkout@v3.5.0
 #      # Install NPM dependencies, cache them correctly
 #      # and run all Cypress tests
 #      - name: Cypress run

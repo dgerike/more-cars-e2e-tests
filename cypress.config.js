@@ -31,6 +31,7 @@ module.exports = defineConfig({
   viewportHeight: 1080,
 
   e2e: {
+    responseTimeout: 60000,
     baseUrl: 'https://more-cars.net',
     specPattern: '**/*.feature',
     setupNodeEvents,
