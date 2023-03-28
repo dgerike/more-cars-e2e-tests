@@ -16,7 +16,7 @@ jobs:
         containers: [ 1, 2, 3 ]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.5.0
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
@@ -68,7 +68,7 @@ jobs:
 #        containers: [ 1, 2, 3 ]
 #    steps:
 #      - name: Checkout
-#        uses: actions/checkout@v2
+#        uses: actions/checkout@v3.5.0
 #      # Install NPM dependencies, cache them correctly
 #      # and run all Cypress tests
 #      - name: Cypress run
@@ -107,7 +107,7 @@ jobs:
 #        containers: [ 1, 2, 3 ]
 #    steps:
 #      - name: Checkout
-#        uses: actions/checkout@v2
+#        uses: actions/checkout@v3.5.0
 #      # Install NPM dependencies, cache them correctly
 #      # and run all Cypress tests
 #      - name: Cypress run
