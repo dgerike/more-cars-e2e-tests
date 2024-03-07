@@ -16,11 +16,11 @@ jobs:
         containers: [ 1, 2, 3 ]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v4.1.1
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
-        uses: cypress-io/github-action@v5.0.9
+        uses: cypress-io/github-action@v6.6.1
         continue-on-error: true
         with:
           record: true
@@ -36,7 +36,7 @@ jobs:
       - name: Create fancy HTML report
         run: npm run create-fancy-html-report
       - name: Archive test reports
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v4.3.1
         with:
           name: test-reports
           path: cypress/reports
