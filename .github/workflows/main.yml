@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Run Cypress Tests
 
 on: [push]
 
@@ -6,20 +6,16 @@ jobs:
   cypress-electron-desktop:
     runs-on: ubuntu-latest
     strategy:
-      # when one test fails, DO NOT cancel the other
-      # containers, because this will kill Cypress processes
-      # leaving the Dashboard hanging ...
-      # https://github.com/cypress-io/github-action/issues/48
+      # When one test fails, do NOT cancel the other containers, because this will kill Cypress processes,
+      # leaving the Dashboard hanging, see https://github.com/cypress-io/github-action/issues/48
       fail-fast: false
       matrix:
         # run 3 copies of the current job in parallel
         containers: [ 1, 2, 3 ]
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4.1.1
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
+      - name: Run Cypress tests
         uses: cypress-io/github-action@v6.6.1
         continue-on-error: true
         with:
@@ -29,7 +25,6 @@ jobs:
           config: "specPattern=**/Done/*.feature,viewportWidth=1920,viewportHeight=1080"
           group: "Electron - Desktop"
         env:
-          # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -40,7 +35,7 @@ jobs:
         with:
           name: test-reports
           path: cypress/reports
-      - name: Upload test results
+      - name: Upload test results to Jira/Xray
         run: npm run upload-test-results
         env:
           XRAY_API_CLIENT_ID: ${{ secrets.XRAY_API_CLIENT_ID }}
