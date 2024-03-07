@@ -40,11 +40,6 @@ jobs:
         with:
           name: test-reports
           path: cypress/reports
-      - name: Archive videos
-        uses: actions/upload-artifact@v3.1.2
-        with:
-          name: videos
-          path: cypress/videos
       - name: Upload test results
         run: npm run upload-test-results
         env:
