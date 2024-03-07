@@ -25,8 +25,6 @@ module.exports = defineConfig({
     mochaFile: "cypress/reports/xml/test-results-[hash].xml",
   },
 
-  videoCompression: 20,
-  videoUploadOnPasses: false,
   viewportWidth: 1920,
   viewportHeight: 1080,
 
