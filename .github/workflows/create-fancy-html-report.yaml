@@ -22,3 +22,8 @@ jobs:
           path: cypress/reports
       - name: Create report
         run: npm run create-fancy-html-report
+      - name: Save fancy HTML report as artifact within the pipeline job
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: fancy-html-test-report
+          path: cypress/reports/fancy-html
