@@ -32,13 +32,13 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Archive test reports
+      - name: Save cucumber test report as artifact (JSON)
         uses: actions/upload-artifact@v4.3.1
         with:
-          name: test-reports
-          path: cypress/reports
+          name: cucumber-test-report-${{ matrix.containers }}
+          path: cypress/reports/json
       - name: Save simple HTML report as artifact
         uses: actions/upload-artifact@v4.3.1
         with:
-          name: simple-html-test-report
+          name: simple-html-test-report-${{ matrix.containers }}
           path: cypress/reports/html-basic
