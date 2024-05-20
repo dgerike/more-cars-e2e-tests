@@ -23,9 +23,10 @@ jobs:
       - name: Download archived test reports
         uses: actions/download-artifact@v4.1.7
         with:
-          path: cypress/reports
+          path: cypress/reports/json
           pattern: cucumber-test-report-*
-      - run: ls -la cypress/reports
+          merge-multiple: true
+      - run: ls -la cypress/reports/json
       - name: Upload test results to Jira/Xray
         run: npm run upload-test-results
         env:

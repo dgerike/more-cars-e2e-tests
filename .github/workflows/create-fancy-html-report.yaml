@@ -18,9 +18,10 @@ jobs:
       - name: Download archived cucumber report
         uses: actions/download-artifact@v4.1.7
         with:
-          path: cypress/reports
+          path: cypress/reports/json
           pattern: cucumber-test-report-*
-      - run: ls -la cypress/reports
+          merge-multiple: true
+      - run: ls -la cypress/reports/json
       - name: Create report
         run: npm run create-fancy-html-report
       - name: Save fancy HTML report as artifact
