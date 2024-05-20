@@ -1,0 +1,24 @@
+name: Create Fancy HTML Report
+
+on:
+  workflow_call:
+
+jobs:
+  create-fancy-html-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.1
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Node.js dependencies
+        run: npm ci
+      - name: Download archived test reports
+        uses: actions/download-artifact@v4.1.7
+        with:
+          name: test-reports
+          path: cypress/reports
+      - name: Create report
+        run: npm run create-fancy-html-report
