@@ -32,10 +32,10 @@
   "bugs": "https://github.com/dgerike/more-cars-e2e-tests/issues",
   "homepage": "https://github.com/dgerike/more-cars-e2e-tests#readme",
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "20.0.2",
+    "@badeball/cypress-cucumber-preprocessor": "20.0.5",
     "@bahmutov/cypress-esbuild-preprocessor": "2.2.0",
     "@deepakvishwakarma/cucumber-json-formatter": "0.0.3",
-    "cypress": "13.6.6",
+    "cypress": "13.9.0",
     "multiple-cucumber-html-reporter": "3.6.2",
     "node-fetch": "3.3.2",
     "sanitize-filename": "1.6.3"
