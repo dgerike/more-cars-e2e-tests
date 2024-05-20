@@ -29,9 +29,7 @@
   },
   "author": "Dennis Gerike",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dgerike/more-cars-e2e-tests/issues"
-  },
+  "bugs": "https://github.com/dgerike/more-cars-e2e-tests/issues",
   "homepage": "https://github.com/dgerike/more-cars-e2e-tests#readme",
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "20.0.2",
