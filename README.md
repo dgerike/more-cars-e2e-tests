@@ -12,11 +12,11 @@ and how they can be run in GitHub as a (parallelized) CI job.
 
 ## Installation
 1. Install Node.js: https://nodejs.org/en/
-1. Clone the repo: https://github.com/dgerike/more-cars-e2e-tests 
-1. Open the console
-1. Navigate to the path of the cloned repo
-1. Run `npm install`
-1. Run `npx cypress verify` to check if Cypress has been installed correctly
+2. Clone the repo: https://github.com/dgerike/more-cars-e2e-tests 
+3. Open the console
+4. Navigate to the path of the cloned repo
+5. Run `npm install`
+6. Run `npx cypress verify` to check if Cypress has been installed correctly
 
 ## Running tests
 Cypress can be started in two modes: `open` mode and `run` mode. 
@@ -30,8 +30,8 @@ The other mode is for executing the test suite.
 4. Select "E2E Testing"
 5. Select one of the available browsers and click "Start E2E Testing in ..."
 6. Click on any of the tests to run it
-8. Use the search field to filter tests
-9. Use the browser toggle to switch browsers on the fly
+7. Use the search field to filter tests
+8. Use the browser toggle to switch browsers on the fly
 
 ### Running tests on the command line
 1. Open a console and navigate to the path of the cloned repo
