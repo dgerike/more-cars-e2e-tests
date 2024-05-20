@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "open-cypress-tests-in-gui": "npx cypress open",
-    "run-cypress-tests-in-terminal": "npx cypress run --config specPattern=**/Done/*.feature; npm run create-fancy-html-report",
+    "run-cypress-tests-in-terminal": "npx cypress run --config specPattern=**/Done/*.feature",
     "download-scenarios": "scripts/download-gherkin-scenarios.sh",
     "upload-test-results": "scripts/upload-test-results-to-xray.sh",
-    "test": "npx cypress run --config specPattern=**/Done/*.feature; npm run create-fancy-html-report",
+    "test": "npm run run-cypress-tests-in-terminal; npm run create-fancy-html-report",
     "create-fancy-html-report": "node scripts/create-fancy-html-reports.js",
     "test-and-upload-to-cypress-dashboard": "npx cypress run --config specPattern=**/Done/*.feature --record"
   },
