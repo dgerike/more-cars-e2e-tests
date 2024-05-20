@@ -5,3 +5,4 @@ on: [push]
 jobs:
   cypress-tests:
     uses: ./.github/workflows/execute-cypress-test-suite.yaml
+    secrets: inherit
