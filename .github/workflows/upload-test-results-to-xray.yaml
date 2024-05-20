@@ -1,0 +1,32 @@
+name: Upload Test Results To Xray
+
+on:
+  workflow_call:
+    secrets:
+      XRAY_API_CLIENT_ID:
+        required: true
+      XRAY_API_CLIENT_SECRET:
+        required: true
+
+jobs:
+  upload-test-results:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.1
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Node.js dependencies
+        run: npm ci
+      - name: Download archived test reports
+        uses: actions/download-artifact@v4.1.7
+        with:
+          name: test-reports
+          path: cypress/reports
+      - name: Upload test results to Jira/Xray
+        run: npm run upload-test-results
+        env:
+          XRAY_API_CLIENT_ID: ${{ secrets.XRAY_API_CLIENT_ID }}
+          XRAY_API_CLIENT_SECRET: ${{ secrets.XRAY_API_CLIENT_SECRET }}

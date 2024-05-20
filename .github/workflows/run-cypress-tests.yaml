@@ -13,3 +13,11 @@ jobs:
       cypress-tests,
     ]
     uses: ./.github/workflows/create-fancy-html-report.yaml
+
+  upload-test-results:
+    if: success() || failure()
+    needs: [
+      cypress-tests,
+    ]
+    uses: ./.github/workflows/upload-test-results-to-xray.yaml
+    secrets: inherit
