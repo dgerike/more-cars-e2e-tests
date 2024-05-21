@@ -16,7 +16,7 @@
   "cypress-cucumber-preprocessor": {
     "messages": {
       "enabled": true,
-      "output": "cypress/reports/ndjson/messages.ndjson"
+      "output": "cypress/reports/ndjson/test-results.ndjson"
     },
     "json": {
       "enabled": true,

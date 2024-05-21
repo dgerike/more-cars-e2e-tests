@@ -20,14 +20,17 @@ jobs:
           node-version: 20
       - name: Install Node.js dependencies
         run: npm ci
-      - name: Download archived test reports
+      - name: Downloading raw test results
         uses: actions/download-artifact@v4.1.7
         with:
-          path: cypress/reports/json
-          pattern: cucumber-test-report-*
+          path: cypress/reports/ndjson
+          pattern: raw-test-results-*
           merge-multiple: true
-      - run: ls -la cypress/reports/json
-      - name: Upload test results to Jira/Xray
+      - name: Merging raw test results
+        run: npx cucumber-merge-messages cypress/reports/ndjson/*.ndjson > cypress/reports/ndjson/combined-cucumber-messages.ndjson
+      - name: Creating valid Cucumber test report file
+        run: npx cucumber-json-formatter < cypress/reports/ndjson/combined-cucumber-messages.ndjson > cypress/reports/json/test-results.json
+      - name: Sync test results to Jira/Xray
         run: npm run upload-test-results
         env:
           XRAY_API_CLIENT_ID: ${{ secrets.XRAY_API_CLIENT_ID }}

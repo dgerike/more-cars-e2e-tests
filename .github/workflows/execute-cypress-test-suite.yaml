@@ -32,10 +32,10 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Rename test report to be unique across multiple containers
-        run: mv cypress/reports/json/test-results.json cypress/reports/json/test-results-${{ matrix.containers }}.json
-      - name: Save cucumber test report as artifact (JSON)
+      - name: Renaming test results to be unique across all containers
+        run: mv cypress/reports/ndjson/test-results.ndjson cypress/reports/ndjson/test-results-${{ matrix.containers }}.ndjson
+      - name: Saving raw test results as artifact
         uses: actions/upload-artifact@v4.3.1
         with:
-          name: cucumber-test-report-${{ matrix.containers }}
-          path: cypress/reports/json/test-results-${{ matrix.containers }}.json
+          name: raw-test-results-${{ matrix.containers }}
+          path: cypress/reports/ndjson/raw-test-results-${{ matrix.containers }}.ndjson
