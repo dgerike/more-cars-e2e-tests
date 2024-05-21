@@ -1,5 +1,5 @@
 # More Cars - e2e Test Suite
-[![Cypress Tests](https://github.com/dgerike/more-cars-e2e-tests/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/dgerike/more-cars-e2e-tests/actions/workflows/main.yml)
+[![Cypress Tests](https://github.com/dgerike/more-cars-e2e-tests/actions/workflows/run-cypress-tests.yaml/badge.svg?branch=main)](https://github.com/dgerike/more-cars-e2e-tests/actions/workflows/main.yml)
 
 This repo contains the end2end tests for [More Cars](https://more-cars.net). 
 They are written as [Gherkin](https://cucumber.io/docs/gherkin/reference/) scenarios 
