@@ -39,8 +39,3 @@ jobs:
         with:
           name: cucumber-test-report-${{ matrix.containers }}
           path: cypress/reports/json/test-results-${{ matrix.containers }}.json
-      - name: Save simple HTML report as artifact
-        uses: actions/upload-artifact@v4.3.1
-        with:
-          name: simple-html-test-report-${{ matrix.containers }}
-          path: cypress/reports/html-basic

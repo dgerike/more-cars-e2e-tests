@@ -20,7 +20,7 @@
       "formatter": "./node_modules/@deepakvishwakarma/cucumber-json-formatter/lib/main.js"
     },
     "html": {
-      "enabled": true,
+      "enabled": false,
       "output": "cypress/reports/html-basic/test-results.html"
     }
   },
