@@ -10,7 +10,8 @@
     "upload-test-results": "scripts/upload-test-results-to-xray.sh",
     "test": "npm run run-cypress-tests-in-terminal; npm run create-fancy-html-report",
     "create-fancy-html-report": "node scripts/create-fancy-html-reports.js",
-    "test-and-upload-to-cypress-dashboard": "npx cypress run --config specPattern=**/Done/*.feature --record"
+    "test-and-upload-to-cypress-dashboard": "npx cypress run --config specPattern=**/Done/*.feature --record",
+    "cleanup": "node scripts/cleanup.mjs"
   },
   "cypress-cucumber-preprocessor": {
     "json": {
