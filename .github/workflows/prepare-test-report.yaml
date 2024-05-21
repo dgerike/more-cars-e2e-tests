@@ -1,0 +1,32 @@
+name: Prepare Test Report
+
+on:
+  workflow_call:
+
+jobs:
+  prepare-test-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.1
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Node.js dependencies
+        run: npm ci
+      - name: Downloading the raw test results
+        uses: actions/download-artifact@v4.1.7
+        with:
+          path: cypress/reports/ndjson
+          pattern: raw-test-results-*
+          merge-multiple: true
+      - name: Merging raw test results
+        run: npx cucumber-merge-messages cypress/reports/ndjson/*.ndjson > cypress/reports/ndjson/combined-cucumber-messages.ndjson
+      - name: Creating valid Cucumber test report file
+        run: npx cucumber-json-formatter < cypress/reports/ndjson/combined-cucumber-messages.ndjson > cypress/reports/json/test-results.json
+      - name: Saving the Cucumber report as artifact
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: cucumber-test-report
+          path: cypress/reports/json/test-results.json

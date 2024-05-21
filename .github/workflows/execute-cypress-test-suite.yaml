@@ -38,4 +38,4 @@ jobs:
         uses: actions/upload-artifact@v4.3.1
         with:
           name: raw-test-results-${{ matrix.containers }}
-          path: cypress/reports/ndjson/raw-test-results-${{ matrix.containers }}.ndjson
+          path: cypress/reports/ndjson/test-results-${{ matrix.containers }}.ndjson

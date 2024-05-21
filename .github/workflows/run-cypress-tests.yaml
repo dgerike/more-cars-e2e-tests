@@ -7,17 +7,24 @@ jobs:
     uses: ./.github/workflows/execute-cypress-test-suite.yaml
     secrets: inherit
 
-  create-test-reports:
+  prepare-test-report:
     if: success() || failure()
     needs: [
       cypress-tests,
     ]
-    uses: ./.github/workflows/create-fancy-html-report.yaml
+    uses: ./.github/workflows/prepare-test-report.yaml
 
-  upload-test-results:
+  create-html-report:
     if: success() || failure()
     needs: [
-      cypress-tests,
+      prepare-test-report,
+    ]
+    uses: ./.github/workflows/create-fancy-html-report.yaml
+
+  sync-results-to-xray:
+    if: success() || failure()
+    needs: [
+      prepare-test-report,
     ]
     uses: ./.github/workflows/upload-test-results-to-xray.yaml
     secrets: inherit
