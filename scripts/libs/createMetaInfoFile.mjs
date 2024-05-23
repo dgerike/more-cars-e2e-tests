@@ -5,13 +5,14 @@ const issueTypeId = "10129";
 const transitionId = "31";
 const testPlanKey = "MCTR-9";
 const environments = ["production", "desktop"];
+const dateTime = new Date().toUTCString();
 
 const metaInfo = {
     "fields": {
         "project": {
             "id": projectId
         },
-        "summary": "Test execution",
+        "summary": dateTime,
         "issuetype": {
             "id": issueTypeId
         }
