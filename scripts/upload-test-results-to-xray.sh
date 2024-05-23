@@ -23,13 +23,17 @@ metaInfoFile="${SCRIPTS_DIR}"/temp/meta-info.json
 resultFile="${SCRIPTS_DIR}"/../cypress/reports/json/test-results.json
 echo "Uploading: $resultFile"
 
-RESPONSE=`curl -# --fail --retry 6 \
+RESPONSE=`curl -# --fail-with-body --retry 6 \
     -X POST 'https://xray.cloud.getxray.app/api/v2/import/execution/cucumber/multipart' \
     -H "Authorization: Bearer $XRAY_API_TOKEN" \
     -H "Content-Type: multipart/form-data" \
     -F results="@${resultFile}" \
     -F info="@${metaInfoFile}"`
 
-JIRA_ISSUE_ID=`node "${SCRIPTS_DIR}"/libs/extractJiraIssueId.mjs $RESPONSE`;
-echo "Test execution results uploaded to https://more-cars.atlassian.net/browse/$JIRA_ISSUE_ID"
-echo
+if [ 0 -eq $? ]; then
+  JIRA_ISSUE_ID=`node "${SCRIPTS_DIR}"/libs/extractJiraIssueId.mjs $RESPONSE`
+  echo "Test execution results uploaded to https://more-cars.atlassian.net/browse/$JIRA_ISSUE_ID"
+else
+  echo "Upload failed!"
+  echo $RESPONSE
+fi;
