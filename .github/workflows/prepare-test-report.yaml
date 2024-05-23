@@ -24,9 +24,9 @@ jobs:
       - name: Merging raw test results
         run: npx cucumber-merge-messages cypress/reports/ndjson/*.ndjson > cypress/reports/ndjson/combined-cucumber-messages.ndjson
       - name: Creating valid Cucumber test report file
-        run: npx cucumber-json-formatter < cypress/reports/ndjson/combined-cucumber-messages.ndjson > cypress/reports/json/test-results.json
+        run: npx cucumber-json-formatter < cypress/reports/ndjson/combined-cucumber-messages.ndjson > cypress/reports/test-results.json
       - name: Saving the Cucumber report as artifact
         uses: actions/upload-artifact@v4.3.1
         with:
           name: cucumber-test-report
-          path: cypress/reports/json/test-results.json
+          path: cypress/reports/test-results.json
