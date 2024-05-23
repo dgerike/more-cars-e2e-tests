@@ -1,5 +1,5 @@
 # More Cars - e2e Test Suite
-[![Pipeline](https://github.com/dgerike/more-cars-e2e-tests/actions/workflows/pipeline.yaml/badge.svg?branch=main)](https://github.com/dgerike/more-cars-e2e-tests/actions/workflows/main.yml)
+[![Pipeline](https://github.com/dgerike/more-cars-e2e-tests/actions/workflows/pipeline.yaml/badge.svg?branch=main)](https://github.com/dgerike/more-cars-e2e-tests/actions/workflows/pipeline.yaml)
 [![Cypress Tests](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/simple/zoms1v/main&style=flat&logo=cypress)](https://cloud.cypress.io/projects/zoms1v/runs)
 
 This repo contains the end2end tests for [More Cars](https://more-cars.net). 
