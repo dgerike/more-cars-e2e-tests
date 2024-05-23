@@ -23,8 +23,8 @@ jobs:
       - name: Downloading Cucumber report
         uses: actions/download-artifact@v4.1.7
         with:
-          path: cypress/reports/json
-          pattern: cucumber-test-report
+          name: cucumber-test-report
+          path: cypress/reports/json/test-results.json
       - name: Sync test results to Jira/Xray
         run: npm run upload-test-results
         env:
