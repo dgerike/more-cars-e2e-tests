@@ -80,12 +80,11 @@ A common format for test reports is `JUnit XML`.
 It is supported by many tools and is often used in CI pipelines to have a standardized reporting across all jobs.
 
 Cypress supports this format out of the box.
-It can be configured in the `cypress.json` with the following snippet:
+It can be configured in the `cypress.config.js` with the following snippet:
 ```
-  "reporter": "junit",
-  "reporterOptions": {
-    "mochaFile": "cypress/reports/test-results-[hash].xml"
-  },
+  reporterOptions: {
+    mochaFile: "cypress/reports/xml/test-results-[hash].xml",
+  }
 ```
 
 See https://docs.cypress.io/guides/tooling/reporters for more information.
@@ -101,24 +100,22 @@ We already use it to transform the Gherkin scenarios to a format that Cypress ca
 It can be configured in the `package.json` with the following snippet:
 ```
   "cypress-cucumber-preprocessor": {
-    "cucumberJson": {
-      "generate": true,
-      "outputFolder": "cypress/reports",
-      "filePrefix": "",
-      "fileSuffix": ".cucumber"
+    "json": {
+      "enabled": true,
+      "output": "cypress/reports/json/test-results.json"
     }
-  },
+  }
 ```
 
-See https://www.npmjs.com/package/cypress-cucumber-preprocessor#user-content-output for more information.
+See https://www.npmjs.com/package/cypress-cucumber-preprocessor#output for more information.
 
 #### Cypress Dashboard
 
 The "Cypress Dashboard" is a (paid) service by the company that created Cypress.
-It allows to upload test results and provides good tools to analyze them afterwards. 
+It allows to upload test results and provides good tools to analyze them afterward. 
 
 To activate the uploading to the Cypress Dashboard the following information needs to be provided:
-* the `projectId` in the `cypress.json`
+* the `projectId` in the `cypress.config.js`
 * the record key as environment variable: `export CYPRESS_RECORD_KEY=...`
 * the `--record` flag in the cli command: `npx cypress run --record`
 
@@ -128,7 +125,7 @@ The results for this project can be seen here: https://dashboard.cypress.io/proj
 
 #### Xray/Jira
 
-Another way to visualize the test results is test management tool `Xray`.
+Another way to visualize the test results is the test management tool `Xray`.
 It is a (paid) plugin for the project management tool `Jira`.
 It allows to write, manage and execute tests.
 It integrates very well with Jira and is capable of creating comprehensive test reports.
