@@ -24,7 +24,7 @@ jobs:
         uses: actions/download-artifact@v4.1.7
         with:
           name: cucumber-test-report
-          path: cypress/reports/json/test-results.json
+          path: cypress/reports/json
       - run: ls -la cypress/reports/json
       - run: cat cypress/reports/json/test-results.json
       - name: Sync test results to Jira/Xray
