@@ -10,7 +10,7 @@
     "upload-test-results": "scripts/upload-test-results-to-xray.sh",
     "test": "npm run run-cypress-tests-in-terminal; npm run create-fancy-html-report",
     "create-fancy-html-report": "node scripts/create-fancy-html-reports.js",
-    "test-and-upload-to-cypress-dashboard": "npx cypress run --config specPattern=**/Done/*.feature --record",
+    "test-and-upload-to-cypress-dashboard": "CYPRESS_RECORD_KEY=<INSERT_KEY> npx cypress run --config specPattern=**/Done/*.feature --record",
     "cleanup": "node scripts/cleanup.mjs"
   },
   "cypress-cucumber-preprocessor": {
@@ -36,11 +36,11 @@
   "bugs": "https://github.com/dgerike/more-cars-e2e-tests/issues",
   "homepage": "https://github.com/dgerike/more-cars-e2e-tests#readme",
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "20.1.0",
-    "@bahmutov/cypress-esbuild-preprocessor": "2.2.1",
+    "@badeball/cypress-cucumber-preprocessor": "22.2.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "2.2.5",
     "@deepakvishwakarma/cucumber-json-formatter": "0.0.3",
-    "cypress": "13.12.0",
-    "multiple-cucumber-html-reporter": "3.6.2",
+    "cypress": "14.5.1",
+    "multiple-cucumber-html-reporter": "3.9.3",
     "node-fetch": "3.3.2",
     "sanitize-filename": "1.6.3"
   }
