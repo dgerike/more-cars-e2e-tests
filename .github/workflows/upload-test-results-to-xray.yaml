@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
@@ -21,7 +21,7 @@ jobs:
       - name: Install Node.js dependencies
         run: npm ci
       - name: Downloading Cucumber report
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: cucumber-test-report
           path: cypress/reports/json
